@@ -24,12 +24,13 @@ public class Alumno {
 	private String nombre;
 	private String dni;
 	private String correo;
-		
 	
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone="America/Lima" )
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaNacimiento;
+
+	private String direccion;	
 	
 	
 	public Date getFechaNacimiento() {
@@ -61,6 +62,12 @@ public class Alumno {
 	}
 	public void setCorreo(String correo) {
 		this.correo = correo;
+	}
+	public String getDireccion() {
+		return direccion;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 
 
